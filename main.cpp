@@ -40,14 +40,7 @@ int WINAPI WinMain(HINSTANCE hlnstnce, HINSTANCE hlnstanceprev, LPSTR lpCmdLine,
 
 	//ウインドウを生成
 	hwnd = create WindowEX(0,		//拡張ウインドスタイル
-		CLASS_NAME,					//ウインドクラスの名前
-		WINDOW_NAME,				//ウインドウの名前
-		WS_OVERLAPPEWINDOW,			//ウインドウスタイル
-		CW_USEDEFAULT,				//ウインドウの左上x座標
-		CW_USEDEFAULT,				//ウインドウの左上x座標
-		SCREEN_WIDTH,				//ウインドウの幅
-		SCREEN_HEIGHT,				//ウインドウの高さ
-		NULL,						//親ウインドウのハンドル
+		CLASS	//親ウインドウのハンドル
 		NULL,						//メニューまたはウインドウID
 		hlnstnce,					//インスタンスハンドル
 		NULL);						//ウインドウ作成データ
@@ -80,17 +73,10 @@ LRESULT WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM IParam)
 		HWND hWnd Buttonfinish
 	
 
-	switch (uMsg)
-	{
-	case WM_DESTROY:		//ウインドウ破棄のメッセージ
-		//WM_QUITを送る
-		PostQuitMessage(0);
-
-	case WM_CREATE:			//ウインドウ生成メッセージ
-		//入力ウインドウの生成
 		hWndEditInPut = CreateWindowEX(0,"EDIT","",(WS_CHILD | WS_VISIBLE | WS_BORDER | ES_RIGHT),50,50,250,25,hWnd,
 
-
+			argbasssv
+			zbfdrgfb
 		)
 
 		case WM_KEYDOWN;	//キー押下のメッセージ
